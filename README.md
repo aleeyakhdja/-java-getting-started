@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Java Getting Started (Maven)
 
 A barebones Java app, which can easily be deployed to Heroku.
@@ -45,3 +46,7 @@ $ heroku open
 For more information about using Java on Heroku, see these Dev Center articles:
 
 - [Java on Heroku](https://devcenter.heroku.com/categories/java)
+=======
+# -java-getting-started
+Java Getting Started Heroku Project
+>>>>>>> 9507a180c83b698c6e2aece99517229bd06ccd10
