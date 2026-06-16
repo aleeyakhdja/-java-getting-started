@@ -50,3 +50,4 @@ For more information about using Java on Heroku, see these Dev Center articles:
 # -java-getting-started
 Java Getting Started Heroku Project
 >>>>>>> 9507a180c83b698c6e2aece99517229bd06ccd10
+Paksa tukar commit hash
