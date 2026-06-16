@@ -1,9 +1,5 @@
-cat << 'EOF' > src/main/java/com/heroku/java/GettingStartedApplication.java
 package com.heroku.java;
 
-import org.jscience.physics.amount.Amount;
-import org.jscience.physics.model.RelativisticModel;
-import javax.measure.unit.SI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -23,18 +19,6 @@ public class GettingStartedApplication {
     @Autowired
     public GettingStartedApplication(DataSource dataSource) {
         this.dataSource = dataSource;
-    }
-
-    @GetMapping("/convert")
-    String convert(Map<String, Object> model) {
-        RelativisticModel.select();
-        final var result = java.util.Optional
-            .ofNullable(System.getenv().get("ENERGY"))
-            .map(Amount::valueOf)
-            .map(energy -> "E=mc^2: " + energy + " = " + energy.to(SI.KILOGRAM))
-            .orElse("ENERGY environment variable is not set!");
-        model.put("result", result);
-        return "convert";
     }
 
     @GetMapping("/")
@@ -62,4 +46,3 @@ public class GettingStartedApplication {
         SpringApplication.run(GettingStartedApplication.class, args);
     }
 }
-EOF
