@@ -1,3 +1,4 @@
+cat << 'EOF' > src/main/java/com/heroku/java/GettingStartedApplication.java
 package com.heroku.java;
 
 import org.jscience.physics.amount.Amount;
@@ -61,3 +62,4 @@ public class GettingStartedApplication {
         SpringApplication.run(GettingStartedApplication.class, args);
     }
 }
+EOF
